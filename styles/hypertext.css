@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #fdf7f1;
+  color: #2a1b12;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+.page {
+  width: min(760px, 92%);
+  margin: 2rem auto 3rem;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a5a49;
+  font-size: 0.85rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+}
+
+.card {
+  background: #fff;
+  border: 2px solid #d6b9a7;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.coffeebar { 
+  width: 50%;
+}
+
+a,
+button {
+  color: #2a1b12;
+}
+
+.choices a,
+.button,
+button {
+  display: inline-block;
+  border: 1px solid #7a5a49;
+  background: #f7e7dc;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+input {
+  margin: 0.4rem 0.5rem 0.6rem 0;
+  padding: 0.4rem;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #5b4538;
+}
+
+.stamps {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
