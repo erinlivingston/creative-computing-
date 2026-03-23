@@ -1,0 +1,81 @@
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #ececec;
+      color: #111;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      margin: 0 0 36px;
+      font-size: 52px;
+      line-height: 1.05;
+      font-weight: 550;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 36px;
+    }
+
+    .card {
+      width: 210px;
+      min-height: 215px;
+      background: #f5f5f5;
+      border: 1px solid #c9c9c9;
+      border-radius: 12px;
+      padding: 28px 22px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .card h2 {
+      margin: 0 0 36px;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 500;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.35;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12);
+    }
+
+    .card.dark {
+      background: #000;
+      color: #f2f2f2;
+      border-color: #000;
+    }
+
+    .card.highlight h2 {
+      display: inline-block;
+      margin-bottom: 36px;
+      padding: 6px 16px;
+      background: #efced4;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+    }
+
+    .card.pink h2 {
+      color: #c01660;
+    }
+
+    .card.blue {
+      border: 2px solid #5b72d8;
+      box-shadow: 0 0 0 2px rgba(91, 114, 216, 0.1);
+    }
+
+    .card.pink.blue h2 {
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
