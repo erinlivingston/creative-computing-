@@ -1,0 +1,65 @@
+<svg width="300" height="380" viewBox="0 0 300 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Dr Pepper can illustration</title>
+<desc>Flat illustrative standard short can, deep maroon, Dr Pepper label with 23 badge</desc>
+
+<defs>
+  <linearGradient id="maroon-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3A0A0A"/>
+    <stop offset="28%" stop-color="#6B1212"/>
+    <stop offset="52%" stop-color="#8B1A1A"/>
+    <stop offset="72%" stop-color="#6B1212"/>
+    <stop offset="100%" stop-color="#3A0A0A"/>
+  </linearGradient>
+  <linearGradient id="silver-top" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#909090"/>
+    <stop offset="40%" stop-color="#E0E0E0"/>
+    <stop offset="60%" stop-color="#E8E8E8"/>
+    <stop offset="100%" stop-color="#909090"/>
+  </linearGradient>
+  <clipPath id="dp-can-clip">
+    <path d="M72,36 L228,36 L228,342 Q228,358 150,358 Q72,358 72,342 Z"/>
+  </clipPath>
+</defs>
+
+<!-- can body -->
+<g clip-path="url(#dp-can-clip)">
+  <rect x="72" y="36" width="156" height="322" fill="url(#maroon-grad)"/>
+  <rect x="72" y="36" width="16" height="322" fill="white" opacity="0.08"/>
+  <rect x="212" y="36" width="16" height="322" fill="black" opacity="0.12"/>
+
+  <!-- swoosh arcs -->
+  <path d="M88,110 Q150,70 212,110" fill="none" stroke="white" stroke-width="2.5" opacity="0.9"/>
+  <path d="M88,205 Q150,245 212,205" fill="none" stroke="white" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- Dr text -->
+  <text x="138" y="138" font-family="Georgia, serif" font-size="26" font-weight="bold" font-style="italic" fill="white" text-anchor="middle" letter-spacing="1">Dr</text>
+  <!-- Pepper text -->
+  <text x="152" y="185" font-family="Georgia, serif" font-size="44" font-weight="bold" font-style="italic" fill="white" text-anchor="middle" letter-spacing="-1">Pepper</text>
+  <!-- Est 1885 -->
+  <text x="186" y="202" font-family="Georgia, serif" font-size="9.5" fill="white" text-anchor="middle" letter-spacing="0.5">Est.1885</text>
+
+  <!-- 23 badge -->
+  <circle cx="150" cy="262" r="26" fill="none" stroke="white" stroke-width="2"/>
+  <circle cx="150" cy="262" r="20" fill="none" stroke="white" stroke-width="0.8" opacity="0.5"/>
+  <text x="150" y="270" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">23</text>
+
+  <!-- authentic blend — two lines -->
+  <text x="150" y="298" font-family="Georgia, serif" font-size="7" fill="white" text-anchor="middle" letter-spacing="1.5" opacity="0.9">AUTHENTIC BLEND</text>
+  <text x="150" y="310" font-family="Georgia, serif" font-size="7" fill="white" text-anchor="middle" letter-spacing="1.5" opacity="0.9">OF 23 FLAVORS</text>
+</g>
+
+<!-- can outline -->
+<path d="M72,36 L228,36 L228,342 Q228,358 150,358 Q72,358 72,342 Z" fill="none" stroke="#2A0808" stroke-width="1.5"/>
+
+<!-- top neck taper -->
+<polygon points="72,36 90,16 210,16 228,36" fill="url(#maroon-grad)"/>
+<polygon points="72,36 90,16 210,16 228,36" fill="none" stroke="#2A0808" stroke-width="1"/>
+
+<!-- top lid -->
+<ellipse cx="150" cy="16" rx="60" ry="10" fill="url(#silver-top)" stroke="#888" stroke-width="1.2"/>
+<ellipse cx="150" cy="16" rx="46" ry="6" fill="#D4D4D4" stroke="#AAA" stroke-width="0.5"/>
+
+<!-- bottom -->
+<path d="M72,342 Q72,358 150,358 Q228,358 228,342" fill="url(#maroon-grad)" stroke="#2A0808" stroke-width="1"/>
+
+</svg>

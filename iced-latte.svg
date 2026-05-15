@@ -1,0 +1,53 @@
+<svg width="300" height="420" viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Iced latte cup illustration</title>
+<desc>Clear plastic iced latte cup, flat lid, white straw, light brown latte with ice cubes contained within the cup walls</desc>
+
+<defs>
+  <clipPath id="cup-clip">
+    <polygon points="70,118 228,118 208,368 92,368"/>
+  </clipPath>
+</defs>
+
+<!-- straw behind cup -->
+<rect x="178" y="18" width="11" height="265" rx="5" fill="#F0EEE8" stroke="#C8C4BC" stroke-width="1"/>
+
+<!-- cup body fill -->
+<polygon points="70,118 228,118 208,368 92,368" fill="#C8956A" opacity="0.78"/>
+
+<!-- ice cubes clipped to cup interior -->
+<g clip-path="url(#cup-clip)">
+  <rect x="78" y="125" width="44" height="44" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.78" transform="rotate(-14,100,147)"/>
+  <rect x="148" y="112" width="38" height="38" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.72" transform="rotate(9,167,131)"/>
+  <rect x="188" y="128" width="38" height="38" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.70" transform="rotate(-6,207,147)"/>
+
+  <rect x="82" y="185" width="40" height="40" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.74" transform="rotate(11,102,205)"/>
+  <rect x="136" y="178" width="44" height="44" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.68" transform="rotate(-17,158,200)"/>
+  <rect x="182" y="190" width="34" height="34" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.65" transform="rotate(7,199,207)"/>
+
+  <rect x="90" y="248" width="44" height="44" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.70" transform="rotate(-9,112,270)"/>
+  <rect x="146" y="244" width="38" height="38" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.66" transform="rotate(13,165,263)"/>
+  <rect x="183" y="252" width="30" height="30" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.62" transform="rotate(-5,198,267)"/>
+
+  <rect x="96" y="308" width="40" height="40" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.66" transform="rotate(8,116,328)"/>
+  <rect x="146" y="312" width="44" height="44" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.62" transform="rotate(-12,168,334)"/>
+  <rect x="182" y="310" width="28" height="28" rx="5" fill="#EBF4F8" stroke="#B8D4E4" stroke-width="1" opacity="0.58" transform="rotate(6,196,324)"/>
+</g>
+
+<!-- cup highlight -->
+<polygon points="74,100 86,100 82,360 70,360" fill="white" opacity="0.18"/>
+
+<!-- cup outline -->
+<polygon points="68,90 230,90 210,370 90,370" fill="none" stroke="#A07040" stroke-width="1.5"/>
+
+<!-- lid -->
+<rect x="58" y="72" width="184" height="20" rx="5" fill="#B8D8EC" stroke="#7BBAD6" stroke-width="1.5"/>
+<rect x="62" y="74" width="176" height="8" rx="3" fill="white" opacity="0.22"/>
+<rect x="58" y="88" width="184" height="6" rx="2" fill="#A8CCDF" stroke="#7BBAD6" stroke-width="0.5"/>
+
+<!-- straw front -->
+<rect x="178" y="10" width="11" height="84" rx="5" fill="#F0EEE8" stroke="#C8C4BC" stroke-width="1"/>
+
+<!-- bottom -->
+<ellipse cx="150" cy="370" rx="60" ry="8" fill="#A07040" opacity="0.45" stroke="#A07040" stroke-width="1"/>
+
+</svg>

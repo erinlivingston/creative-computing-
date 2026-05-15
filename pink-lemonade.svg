@@ -1,0 +1,82 @@
+<svg width="300" height="460" viewBox="0 0 300 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>Pink lemonade glass illustration</title>
+<desc>Flat outline-style glass of pink lemonade with lemon wedge inside, ice cubes, bubbles, yellow lemon wheel on rim, light blue straw</desc>
+
+<defs>
+  <linearGradient id="pink-fill" x1="0%" y1="100%" x2="0%" y2="0%">
+    <stop offset="0%" stop-color="#F080A0" opacity="0.7"/>
+    <stop offset="100%" stop-color="#FAC0D0" opacity="0.5"/>
+  </linearGradient>
+  <clipPath id="glass-clip">
+    <polygon points="82,90 218,90 202,370 98,370"/>
+  </clipPath>
+</defs>
+
+<!-- liquid fill -->
+<g clip-path="url(#glass-clip)">
+  <polygon points="82,90 218,90 202,370 98,370" fill="url(#pink-fill)"/>
+</g>
+
+<!-- glass outline -->
+<polygon points="82,90 218,90 202,370 98,370" fill="none" stroke="#E05080" stroke-width="3"/>
+<line x1="82" y1="90" x2="218" y2="90" stroke="#E05080" stroke-width="3"/>
+<rect x="98" y="370" width="104" height="12" rx="4" fill="none" stroke="#E05080" stroke-width="2.5"/>
+
+<!-- lemon wedge inside -->
+<g transform="translate(148,290)">
+  <path d="M-50,0 A50,50 0 0,1 50,0 Z" fill="none" stroke="#E05080" stroke-width="2.5"/>
+  <path d="M-50,0 A50,50 0 0,1 50,0 Q42,8 0,10 Q-42,8 -50,0 Z" fill="#E05080" opacity="0.25"/>
+  <path d="M-42,0 A42,42 0 0,1 42,0 Z" fill="#F5B0C0" opacity="0.5"/>
+  <line x1="0" y1="0" x2="0" y2="-42" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="-21" y2="-36" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="21" y2="-36" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="-36" y2="-21" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="36" y2="-21" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="-42" y2="0" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <line x1="0" y1="0" x2="42" y2="0" stroke="#E05080" stroke-width="1.5" opacity="0.7"/>
+  <circle cx="0" cy="0" r="4" fill="none" stroke="#E05080" stroke-width="1.5"/>
+</g>
+
+<!-- ice cubes -->
+<rect x="96" y="106" width="44" height="44" rx="6" fill="white" opacity="0.45" stroke="#E05080" stroke-width="2" transform="rotate(-10,118,128)"/>
+<line x1="100" y1="114" x2="112" y2="142" stroke="#E05080" stroke-width="1" opacity="0.5" transform="rotate(-10,118,128)"/>
+<line x1="116" y1="108" x2="106" y2="142" stroke="#E05080" stroke-width="1" opacity="0.5" transform="rotate(-10,118,128)"/>
+
+<rect x="150" y="98" width="40" height="40" rx="6" fill="white" opacity="0.40" stroke="#E05080" stroke-width="2" transform="rotate(8,170,118)"/>
+<line x1="156" y1="106" x2="164" y2="130" stroke="#E05080" stroke-width="1" opacity="0.5" transform="rotate(8,170,118)"/>
+<line x1="168" y1="102" x2="158" y2="132" stroke="#E05080" stroke-width="1" opacity="0.5" transform="rotate(8,170,118)"/>
+
+<rect x="104" y="178" width="36" height="36" rx="6" fill="white" opacity="0.38" stroke="#E05080" stroke-width="2" transform="rotate(-6,122,196)"/>
+<line x1="108" y1="186" x2="116" y2="208" stroke="#E05080" stroke-width="1" opacity="0.5" transform="rotate(-6,122,196)"/>
+
+<rect x="162" y="168" width="34" height="34" rx="6" fill="white" opacity="0.35" stroke="#E05080" stroke-width="2" transform="rotate(12,179,185)"/>
+
+<!-- bubbles -->
+<circle cx="112" cy="152" r="5" fill="none" stroke="#E05080" stroke-width="1.8"/>
+<circle cx="186" cy="160" r="4" fill="none" stroke="#E05080" stroke-width="1.5"/>
+<circle cx="132" cy="238" r="5" fill="none" stroke="#E05080" stroke-width="1.8"/>
+<circle cx="190" cy="224" r="3.5" fill="none" stroke="#E05080" stroke-width="1.5"/>
+<circle cx="102" cy="268" r="4" fill="none" stroke="#E05080" stroke-width="1.5"/>
+<circle cx="174" cy="122" r="3" fill="none" stroke="#E05080" stroke-width="1.5"/>
+
+<!-- yellow lemon wheel on rim -->
+<g transform="translate(216,76)">
+  <circle cx="0" cy="0" r="32" fill="#F5E040" opacity="0.85" stroke="#D4A800" stroke-width="2.5"/>
+  <circle cx="0" cy="0" r="24" fill="none" stroke="#D4A800" stroke-width="1.5"/>
+  <circle cx="0" cy="0" r="6" fill="none" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="0" y1="-24" x2="0" y2="-6" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="0" y1="6" x2="0" y2="24" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="-24" y1="0" x2="-6" y2="0" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="6" y1="0" x2="24" y2="0" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="-17" y1="-17" x2="-4" y2="-4" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="4" y1="4" x2="17" y2="17" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="17" y1="-17" x2="4" y2="-4" stroke="#D4A800" stroke-width="1.5"/>
+  <line x1="-4" y1="4" x2="-17" y2="17" stroke="#D4A800" stroke-width="1.5"/>
+</g>
+
+<!-- light blue straw — long -->
+<rect x="184" y="30" width="7" height="260" rx="3" fill="#B8E4F8" stroke="#7BBAD6" stroke-width="1.5"/>
+
+<text x="150" y="416" font-family="Georgia, serif" font-size="13" fill="#5f5e5a" text-anchor="middle">pink lemonade</text>
+
+</svg>
