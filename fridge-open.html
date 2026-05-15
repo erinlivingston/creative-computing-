@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erin's Fridge</title>
+  <title>Erin's Fridge — Open</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -31,25 +31,58 @@
       font-size: 0.9rem;
       color: #888780;
       margin-bottom: 2.5rem;
-      max-width: 320px;
+      max-width: 380px;
       text-align: center;
       line-height: 1.7;
     }
 
-    .fridge-link {
-      display: block;
-      text-decoration: none;
-      cursor: pointer;
+    .fridge-scene {
+      display: flex;
+      align-items: flex-end;
+      gap: 0;
     }
 
-    .fridge-link .fridge-svg {
-      width: min(300px, 92vw);
+    .fridge-scene .fridge-door {
+      width: min(42px, 12vw);
+      height: auto;
+      display: block;
+    }
+    .fridge-scene .fridge-body {
+      width: min(300px, 85vw);
       height: auto;
       display: block;
     }
 
-    .fridge-link:hover svg .door-glass {
-      fill: rgba(200,230,215,0.14);
+    /* the swung-open door panel */
+    .door-panel svg {
+      display: block;
+    }
+
+    /* each can is an <a> wrapping an inline svg group — we target the rect inside */
+    a.can-link {
+      display: contents;
+    }
+
+    a.can-link:hover rect.can-body,
+    a.can-link:focus rect.can-body {
+      opacity: 0.75;
+    }
+
+    a.drink-hit:hover > svg,
+    a.drink-hit:focus > svg,
+    a.drink-hit:hover > image,
+    a.drink-hit:focus > image {
+      opacity: 0.88;
+    }
+
+    a.drink-hit:hover .can-body,
+    a.drink-hit:focus .can-body {
+      opacity: 0.88;
+    }
+
+    a.can-link:focus,
+    a.drink-hit:focus {
+      outline: none;
     }
 
     .hint {
@@ -59,23 +92,42 @@
       text-align: center;
       letter-spacing: 0.03em;
     }
+
+    .back {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      color: #b4b2a9;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+
+    .back:hover { color: #5f5e5a; }
   </style>
 </head>
 <body>
 
-  <h1>Erin's Drink Fridge</h1>
-  <p class="intro">Open the fridge to select a drink from either the top shelf, caffeine, the middle shelf, hydrate, or the bottom shelf, celebrate.</p>
+  <h1>erin's fridge</h1>
+  <p class="intro">The door is open. Pick something.</p>
 
-  <a class="fridge-link" href="fridge-open.html" aria-label="Open the fridge">
-    <svg width="260" height="500" class="fridge-svg" viewBox="0 0 260 500" role="img" xmlns="http://www.w3.org/2000/svg">
-      <title>A closed mini fridge — click to open</title>
-      <desc>Flat illustration of a mini fridge with glass door. Top (caffeinate): vanilla latte, peach iced tea, Dr Pepper; middle (hydrate): Gatorade, watermelon juice, Liquid I.V.; bottom (celebrate): pink lemonade, Shirley Temple, piña colada.</desc>
+  <div class="fridge-scene">
+
+    <!-- open door panel swung to the left -->
+    <svg width="36" height="500" class="fridge-door" viewBox="0 0 36 500" role="presentation" xmlns="http://www.w3.org/2000/svg">
+      <rect x="2" y="8" width="28" height="468" rx="5" fill="#E8E5DE" stroke="#B4B2A9" stroke-width="1"/>
+      <rect x="5" y="14" width="22" height="456" rx="4" fill="#D3D1C7"/>
+      <!-- inner door handle stub -->
+      <rect x="20" y="220" width="6" height="60" rx="3" fill="#B4B2A9"/>
+    </svg>
+
+    <!-- fridge body with clickable cans -->
+    <svg width="260" height="500" class="fridge-body" viewBox="0 0 260 500" role="img" xmlns="http://www.w3.org/2000/svg">
+      <title>Open mini fridge — select a drink</title>
+      <desc>Mini fridge interior with three shelves. Top (caffeinate), middle (hydrate), bottom (celebrate): pink lemonade, Shirley Temple, piña colada; drinks link to story pages.</desc>
 
       <!-- casing -->
       <rect x="5" y="5" width="240" height="462" rx="14" fill="#D3D1C7" stroke="#B4B2A9" stroke-width="2"/>
-      <!-- inner bezel -->
       <rect x="11" y="11" width="228" height="450" rx="10" fill="#E8E5DE" stroke="#B4B2A9" stroke-width="1"/>
-      <!-- interior dark bg -->
+      <!-- interior -->
       <rect x="19" y="19" width="212" height="434" rx="8" fill="#1a2a1a" stroke="#444441" stroke-width="1"/>
       <rect x="23" y="23" width="204" height="426" rx="6" fill="#1D2E1D"/>
 
@@ -84,19 +136,27 @@
       <rect x="27" y="316" width="196" height="5" rx="2" fill="#2a3a2a" stroke="#3a4a3a" stroke-width="0.5"/>
       <rect x="27" y="432" width="196" height="5" rx="2" fill="#2a3a2a" stroke="#3a4a3a" stroke-width="0.5"/>
 
-      <!-- top shelf — caffeinate -->
-      <g>
-        <image href="../iced-latte.svg" x="16" y="24" width="70" height="148" preserveAspectRatio="xMidYMax meet"/>
-      </g>
-      <g>
-        <image href="../peach-iced-tea-can.svg" x="88" y="22" width="70" height="150" preserveAspectRatio="xMidYMax meet"/>
-      </g>
-      <g>
-        <image href="../dr-pepper-can.svg" x="159" y="36" width="68" height="136" preserveAspectRatio="xMidYMax meet"/>
-      </g>
+      <!-- ===================== -->
+      <!-- TOP SHELF — caffeinate -->
+      <!-- ===================== -->
 
-      <!-- middle shelf — hydrate -->
-      <g>
+      <a class="drink-hit" href="drink-1.html" aria-label="Vanilla latte — iced latte cup">
+        <image href="../iced-latte.svg" x="16" y="24" width="70" height="148" preserveAspectRatio="xMidYMax meet"/>
+      </a>
+
+      <a class="drink-hit" href="drink-2.html" aria-label="Peach iced tea — Rest in Peach tall boy">
+        <image href="../peach-iced-tea-can.svg" x="88" y="22" width="70" height="150" preserveAspectRatio="xMidYMax meet"/>
+      </a>
+
+      <a class="drink-hit" href="drink-3.html" aria-label="Dr Pepper — 23 flavors">
+        <image href="../dr-pepper-can.svg" x="159" y="36" width="68" height="136" preserveAspectRatio="xMidYMax meet"/>
+      </a>
+
+      <!-- ======================== -->
+      <!-- MIDDLE SHELF — hydrate  -->
+      <!-- ======================== -->
+
+      <a class="drink-hit" href="drink-4.html" aria-label="Gatorade Frost Glacier Freeze bottle">
         <svg x="12" y="174" width="74" height="142" viewBox="0 200 300 380" preserveAspectRatio="xMidYMax meet" role="img">
           <title>Gatorade Glacier Freeze bottle illustration</title>
           <desc>Classic Gatorade bottle shape, light blue, orange cap, Frost Glacier Freeze label with G logo</desc>
@@ -145,8 +205,9 @@
           <line x1="167" y1="230" x2="170" y2="247" stroke="#B05818" stroke-width="0.8" opacity="0.5"/>
           <ellipse cx="150" cy="548" rx="72" ry="7" fill="#4A8AAA" opacity="0.35" stroke="#3A7898" stroke-width="0.5"/>
         </svg>
-      </g>
-      <g>
+      </a>
+
+      <a class="drink-hit" href="drink-5.html" aria-label="Trader Joe's sparkling watermelon juice can">
         <svg x="90" y="180" width="74" height="136" viewBox="0 0 300 420" preserveAspectRatio="xMidYMax meet" role="img">
           <title>Trader Joe's Sparkling Watermelon Juice can illustration</title>
           <desc>Flat illustrative slim can, bright lime green, Trader Joe's sparkling watermelon juice label with watermelon slice</desc>
@@ -200,8 +261,9 @@
           <ellipse cx="150" cy="20" rx="32" ry="5" fill="#D4D4D4" stroke="#AAA" stroke-width="0.5"/>
           <path d="M94,368 Q94,382 150,382 Q206,382 206,368" fill="url(#wmj-green-grad)" stroke="#4A8020" stroke-width="1"/>
         </svg>
-      </g>
-      <g>
+      </a>
+
+      <a class="drink-hit" href="drink-6.html" aria-label="Water with Liquid I.V. Lemon Lime packet">
         <svg x="166" y="176" width="60" height="140" viewBox="0 0 360 460" preserveAspectRatio="xMidYMax meet" role="img">
           <title>Water glass with Liquid IV packet illustration</title>
           <desc>Clear water glass with ice cubes and a small Liquid IV Lemon Lime packet leaning against it</desc>
@@ -269,11 +331,13 @@
           </g>
           <text x="150" y="380" font-family="Georgia, serif" font-size="13" fill="#5f5e5a" text-anchor="middle">water</text>
         </svg>
-      </g>
+      </a>
 
-      <!-- bottom shelf — celebrate -->
+      <!-- ======================== -->
+      <!-- BOTTOM SHELF — celebrate -->
+      <!-- ======================== -->
 
-      <g>
+      <a class="drink-hit" href="drink-7.html" aria-label="Pink lemonade glass">
         <svg x="10" y="302" width="76" height="130" viewBox="0 0 300 460" preserveAspectRatio="xMidYMax meet" role="img">
 <title>Pink lemonade glass illustration</title>
 <desc>Flat outline-style glass of pink lemonade with lemon wedge inside, ice cubes, bubbles, yellow lemon wheel on rim, light blue straw</desc>
@@ -355,9 +419,9 @@
 
 <text x="150" y="416" font-family="Georgia, serif" font-size="13" fill="#5f5e5a" text-anchor="middle">pink lemonade</text>
         </svg>
-      </g>
+      </a>
 
-      <g>
+      <a class="drink-hit" href="drink-8.html" aria-label="Shirley Temple glass">
         <svg x="90" y="302" width="76" height="130" viewBox="0 0 300 460" preserveAspectRatio="xMidYMax meet" role="img">
 <title>Shirley Temple glass illustration</title>
 <desc>Flat outline-style tall glass of Shirley Temple, red-orange liquid, ice cubes, bubbles, two cherries on top, striped straw</desc>
@@ -437,9 +501,9 @@
 
 <text x="150" y="416" font-family="Georgia, serif" font-size="13" fill="#5f5e5a" text-anchor="middle">shirley temple</text>
         </svg>
-      </g>
+      </a>
 
-      <g>
+      <a class="drink-hit" href="drink-9.html" aria-label="Piña colada">
         <svg x="168" y="310" width="62" height="122" viewBox="0 0 300 440" preserveAspectRatio="xMidYMax meet" role="img">
 <title>Piña colada illustration</title>
 <desc>Simple flat outline hurricane glass with white slushy fill, pineapple wedge, cherry, and yellow straw</desc>
@@ -502,21 +566,20 @@
 
 <text x="150" y="422" font-family="Georgia, serif" font-size="13" fill="#5f5e5a" text-anchor="middle">piña colada</text>
         </svg>
-      </g>
+      </a>
 
-      <!-- glass overlay -->
-      <rect class="door-glass" x="23" y="23" width="204" height="426" rx="6" fill="rgba(200,230,215,0.06)" stroke="rgba(255,255,255,0.10)" stroke-width="1.5"/>
-
-      <!-- handle -->
+      <!-- handle stub (right side) -->
       <rect x="240" y="180" width="10" height="80" rx="5" fill="#888780" stroke="#5F5E5A" stroke-width="0.5"/>
 
       <!-- feet -->
       <rect x="15" y="465" width="220" height="14" rx="4" fill="#B4B2A9" stroke="#888780" stroke-width="1"/>
       <rect x="27" y="472" width="196" height="5" rx="2" fill="#888780"/>
     </svg>
-  </a>
 
-  <p class="hint">click to open</p>
+  </div>
+
+  <p class="hint">pick a drink</p>
+  <a class="back" href="hypertext.html">← close the door</a>
 
 </body>
 </html>

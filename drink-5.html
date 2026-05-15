@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erin's Fridge</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, serif;
+      background: #fbd4f6;
+      color: #2c2c2a;
+      min-height: 100vh;
+    }
+    .drink-layout {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 2rem 2.5rem;
+      max-width: 52rem;
+      margin: 0 auto;
+      padding: 2.25rem 1.5rem 3rem;
+    }
+    .drink-visual {
+      flex: 0 0 auto;
+      width: min(280px, 38vw);
+      max-width: 100%;
+      order: 1;
+    }
+    .drink-copy {
+      flex: 1 1 16rem;
+      max-width: 36rem;
+      text-align: left;
+      order: 2;
+    }
+    .drink-visual svg,
+    .drink-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .drink-copy h1 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+      color: #5f5e5a;
+    }
+    .my-story p {
+      font-size: 0.98rem;
+      line-height: 1.8;
+      margin-bottom: 0.9rem;
+      color: #2c2c2a;
+    }
+    .drink-copy > a {
+      display: inline-block;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #888780;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+    }
+    .drink-copy > a:hover { color: #5f5e5a; }
+    @media (max-width: 720px) {
+      .drink-layout { flex-direction: column; }
+      .drink-visual { width: min(240px, 72%); order: 0; }
+      .drink-copy { order: 1; }
+    }
+
+  </style>
+</head>
+<body>
+  <main class="drink-layout">
+    <div class="drink-copy">
+      <h1>Sparkling watermelon juice</h1>
+
+      <!-- Your story: edit the text inside .my-story (add or remove <p> tags as you like). -->
+
+      <div class="my-story">
+        <p>Trader Joe’s watermelon juice is a refreshing drink flavorful drink without too much sweetness. 
+          This is especially delicious on warm summer day or taken to go on a picnic or to the beach. These come 
+          in 4 packs in the seltzer section. 
+        </p>
+      </div>
+
+      <a href="fridge-open.html">← back to the fridge.</a>
+    </div>
+    <div class="drink-visual">
+      <img src="../watermelon-juice-can.svg" alt="Sparkling watermelon juice can illustration" width="300" />
+    </div>
+  </main>
+</body>
+</html>
